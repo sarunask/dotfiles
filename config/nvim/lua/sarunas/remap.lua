@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>sv", vim.cmd.Ex)
 
 -- move block
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
