@@ -59,5 +59,21 @@ use('folke/zen-mode.nvim')
 use('puremourning/vimspector')
 -- Floating terminal
 use ('voldikss/vim-floaterm')
-
+-- TODO, Notes etc
+use {
+    'folke/todo-comments.nvim',
+    config = function()
+        require('todo-comments').setup()
+    end,
+    requires = {
+        {'nvim-lua/plenary.nvim'},
+    }
+}
+-- Comments
+use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 end)

@@ -69,3 +69,15 @@ vim.keymap.set('n', "De", ":call vimspector#Evaluate()<cr>")
 vim.keymap.set('n', "<leader>ft", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 fish <CR> ")
 vim.keymap.set('n', "t", ":FloatermToggle myfloat<CR>")
 vim.keymap.set('t', "<Esc>", "<C-\\><C-n>:q<CR>")
+-- TODO's, Notes
+vim.keymap.set("n", "]t", function()
+  require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+vim.keymap.set("n", "[t", function()
+  require("todo-comments").jump_prev()
+end, { desc = "Previous todo comment" })
+-- You can also specify a list of valid jump keywords
+vim.keymap.set("n", "]t", function()
+  require("todo-comments").jump_next({keywords = { "ERROR", "WARNING" }})
+end, { desc = "Next error/warning todo comment" })
+
