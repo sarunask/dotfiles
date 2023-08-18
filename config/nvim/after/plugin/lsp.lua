@@ -4,12 +4,16 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
     'tsserver',
-    'rust_analyzer',
+    'zls',
 })
+-- Zig LSP
+require'lspconfig'.zls.setup{}
+
+-- Terraform
+require'lspconfig'.terraformls.setup{}
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
-
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}

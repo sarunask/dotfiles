@@ -21,7 +21,10 @@ return require('packer').startup(function(use)
         end
     })
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use({
+        'nvim-treesitter/nvim-treesitter', tag = 'v0.9.1',
+        {run = ':TSUpdate'}
+    })
     use('nvim-treesitter/playground')
     use('nvim-treesitter/nvim-treesitter-context')
     use('ThePrimeagen/harpoon')
@@ -75,5 +78,12 @@ use {
     config = function()
         require('Comment').setup()
     end
+}
+-- Vim Tree
+use {
+  'nvim-tree/nvim-tree.lua',
+  requires = {
+    'nvim-tree/nvim-web-devicons', -- optional
+  },
 }
 end)
