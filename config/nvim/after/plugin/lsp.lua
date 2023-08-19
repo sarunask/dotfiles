@@ -5,7 +5,11 @@ lsp.preset("recommended")
 lsp.ensure_installed({
     'tsserver',
     'zls',
+    'gopls',
 })
+-- GO
+require'lspconfig'.gopls.setup{}
+
 -- Zig LSP
 require'lspconfig'.zls.setup{}
 

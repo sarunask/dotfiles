@@ -21,10 +21,10 @@ return require('packer').startup(function(use)
         end
     })
 
-    use({
+    use{
         'nvim-treesitter/nvim-treesitter', tag = 'v0.9.1',
         {run = ':TSUpdate'}
-    })
+    }
     use('nvim-treesitter/playground')
     use('nvim-treesitter/nvim-treesitter-context')
     use('ThePrimeagen/harpoon')
@@ -86,4 +86,6 @@ use {
     'nvim-tree/nvim-web-devicons', -- optional
   },
 }
+-- Copilot
+use("github/copilot.vim")
 end)
