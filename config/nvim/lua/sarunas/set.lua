@@ -13,7 +13,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+-- vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -61,3 +61,6 @@ let g:vimspector_terminal_maxwidth = 70
 ]])
 -- Enable vim loader
 vim.loader.enable()
+-- Enable long line breaks
+vim.opt.linebreak = true
+vim.opt.breakat = ' '
