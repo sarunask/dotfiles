@@ -21,9 +21,33 @@ require("nvim-tree").setup({
   },
   renderer = {
     group_empty = true,
+  -- change folder arrow icons
+    icons = {
+        glyphs = {
+            folder = {
+                arrow_closed = "+", -- arrow when folder is closed
+                arrow_open = "-", -- arrow when folder is open
+            },
+        },
+    },
   },
+  -- do not filter .dot files
   filters = {
-    dotfiles = true,
+    dotfiles = false,
+  },
+  -- do not filter git
+  git = {
+    ignore = false,
+  },
+  -- disable window_picker for
+  -- explorer to work well with
+  -- window splits
+  actions = {
+    open_file = {
+      window_picker = {
+        enable = false,
+      },
+    },
   },
   on_attach = my_on_attach,
 })

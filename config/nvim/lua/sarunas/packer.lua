@@ -87,5 +87,5 @@ use {
   },
 }
 -- Copilot
-use("github/copilot.vim")
+-- use("github/copilot.vim")
 end)
