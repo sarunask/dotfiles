@@ -21,10 +21,13 @@ return require('packer').startup(function(use)
         end
     })
 
-    use{
-        'nvim-treesitter/nvim-treesitter', tag = 'v0.9.1',
+    use({
+        'nvim-treesitter/nvim-treesitter',
+        as = 'treesitter',
+        commit = '226c1475a46a2ef6d840af9caa0117a439465500',
         {run = ':TSUpdate'}
-    }
+    })
+
     use('nvim-treesitter/playground')
     use('nvim-treesitter/nvim-treesitter-context')
     use('ThePrimeagen/harpoon')
@@ -89,3 +92,4 @@ use {
 -- Copilot
 -- use("github/copilot.vim")
 end)
+
