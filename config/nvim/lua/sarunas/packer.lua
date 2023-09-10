@@ -62,7 +62,12 @@ use('cappyzawa/trim.nvim')
 -- Zen focus mode <leader>zz
 use('folke/zen-mode.nvim')
 -- Debuger
-use('puremourning/vimspector')
+-- use('puremourning/vimspector')
+use ('mfussenegger/nvim-dap')
+use ('jay-babu/mason-nvim-dap.nvim')
+use ('folke/neodev.nvim')
+use { 'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'} }
+use { 'leoluz/nvim-dap-go', requires = {'mfussenegger/nvim-dap'} }
 -- Floating terminal
 use ('voldikss/vim-floaterm')
 -- TODO, Notes etc

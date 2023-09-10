@@ -67,8 +67,6 @@ keymap("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
--- toggle NvimTreeToggle
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>");
 -- Vimspector
 vim.cmd([[
 nmap <F9> <cmd>call vimspector#Launch()<cr>
@@ -87,14 +85,14 @@ keymap('n', "t", ":FloatermToggle myfloat<CR>")
 keymap('t', "<Esc>", "<C-\\><C-n>:q<CR>")
 -- TODO's, Notes
 keymap("n", "]t", function()
-  require("todo-comments").jump_next()
+    require("todo-comments").jump_next()
 end, { desc = "Next todo comment" })
 keymap("n", "[t", function()
-  require("todo-comments").jump_prev()
+    require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 -- You can also specify a list of valid jump keywords
 keymap("n", "]t", function()
-  require("todo-comments").jump_next({keywords = { "ERROR", "WARNING" }})
+    require("todo-comments").jump_next({ keywords = { "ERROR", "WARNING" } })
 end, { desc = "Next error/warning todo comment" })
 
 -- Plugins --
@@ -110,4 +108,3 @@ keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
-
