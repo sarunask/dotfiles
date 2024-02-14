@@ -80,7 +80,7 @@ keymap('n', "Db", ":call vimspector#ToggleBreakpoint()<cr>")
 keymap('n', "Dw", ":call vimspector#AddWatch()<cr>")
 keymap('n', "De", ":call vimspector#Evaluate()<cr>")
 -- FloaTerm configuration
-keymap('n', "<leader>ft", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 fish <CR> ")
+keymap('n', "<leader>tt", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 fish <CR> ")
 keymap('n', "t", ":FloatermToggle myfloat<CR>")
 keymap('t', "<Esc>", "<C-\\><C-n>:q<CR>")
 -- TODO's, Notes
