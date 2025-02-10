@@ -43,7 +43,7 @@ local dap_ok, dap = pcall(require, "dap")
 local dap_ui_ok, ui = pcall(require, "dapui")
 
 if not (dap_ok and dap_ui_ok) then
-  require("notify")("nvim-dap or dap-ui not installed!", "warning") -- nvim-notify is a separate plugin, I recommend it too!
+  require("nvim-notify")("nvim-dap or dap-ui not installed!", "warning") -- nvim-notify is a separate plugin, I recommend it too!
   return
 end
 
